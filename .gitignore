@@ -1,0 +1,21 @@
+# Node build artifacts
+node_modules
+npm-debug.log
+.settings
+
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Project files from Eclipse
+*.jshintrc
+*.project
+*.sublime-project
+*.tern-project
+Procfile
+*.gradle

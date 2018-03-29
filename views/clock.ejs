@@ -1,0 +1,63 @@
+<! DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Mega-Rayquaza Clock</title>
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var ampm = Math.floor(h/12);
+    m = checkTime(m);
+    s = checkTime(s);
+    h %= 12;
+    if(h == 0) {
+    	h += 12;
+    }
+    if(ampm == 0) {
+    	ampm = "AM";
+    } else {
+    	ampm = "PM";
+    }
+    document.getElementById('timer').innerHTML = h + ":" + m + ":" + s + " " + ampm;
+    var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+</script>
+<body onload="startTime()" style="padding: 12px;">
+	<p>Current time:
+	<div id="timer"></div>
+	<img
+		src="http://static.pokemonpets.com/images/monsters-images-300-300/8384-Mega-Rayquaza.png">
+	<br>He has dominion over the Ubers tier. So powerful, those in the
+	Ubers tier lived in fear until its banishment.
+
+	<br>
+	<br>In the meantime, enjoy this lovely song from
+	moonbowmusicmovie.
+	<br>
+	</br>
+	<iframe width="400" height="300"
+		src="https://www.youtube.com/embed/p636Rw_L3XU?autoplay=1"
+		frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<br>
+
+</body>
+</html>
+

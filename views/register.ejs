@@ -1,0 +1,168 @@
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<form method="post" enctype="application/x-www-form-urlencoded"
+	action="/register/register_res">
+
+	<title>Fitness Preliminary Questionnaire</title> <font size="18">Fitness
+		Preliminary Questionnaire</font>
+
+	<p>
+		<label><b>Name: <b> <input type="text" name="name"
+					required></label>
+	</p>
+
+	<p>
+		<label>Phone: <input type="tel" name="phone" required>
+		</label>
+	</p>
+
+	<p>
+		<label>Email: <input type="email" name="email_address"
+			required>
+		</label>
+	</p>
+
+	<fieldset>
+		<legend>Age</legend>
+		<p>
+			<label> <input type="radio" name="age" required
+				value="Below 18"> Below 18
+			</label>
+		</p>
+		<p>
+			<label> <input type="radio" name="age" required value="18-30">
+				18-30
+			</label>
+		</p>
+		<p>
+			<label> <input type="radio" name="age" required value="31-40">
+				31-40
+			</label>
+		</p>
+		<p>
+			<label> <input type="radio" name="age" required value="41-50">
+				41-50
+			</label>
+		</p>
+		<p>
+			<label> <input type="radio" name="age" required value="51-60">
+				51-60
+			</label>
+		</p>
+		<p>
+			<label> <input type="radio" name="age" required value="61+">
+				61+
+			</label>
+		</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>Gender:</legend>
+		<p>
+			<label> <input type="radio" name="gender" required
+				value="Male"> Male
+			</label>
+		</p>
+		<p>
+			<label> <input type="radio" name="gender" required
+				value="Female"> Female
+			</label>
+		</p>
+		<p>
+			<label> <input type="radio" name="gender" required
+				value="Decline to answer"> Decline to answer
+			</label>
+		</p>
+	</fieldset>
+
+	<p>
+		<label>Height (inches): <input type="number" name="height"
+			required list="destinations">
+		</label> in.
+	<p>
+		<label>Weight (pounds): <input type="number" name="weight"
+			required list="destinations">
+		</label> lbs.
+	<p>
+		<label>Estimated body fat (%): <input type="number"
+			name="body_fat" required list="destinations">
+		</label>
+	<p>
+		<label>Fitness goals: <select required id="fitness_goals"
+			name="goals">
+				<option value="" selected="selected">Select one</option>
+				<option value="Weight loss">Weight loss</option>
+				<option value="Build muscle">Build muscles</option>
+				<option value="Improve endurance/conditioning">Improve
+					endurance/conditioning</option>
+				<option value="Improve athleticism">Improve athleticism</option>
+				<option value="Improve flexibility">Improve flexibility</option>
+		</select>
+		</label>
+	</p>
+
+	<p>
+		<label>How frequently do you exercise on a weekly basis? <select
+			required id="weekly" name="weekly">
+				<option value="" selected="selected">Select one</option>
+				<option value="None">Never</option>
+				<option value="1-2 days">1-2</option>
+				<option value="3-4 days">3-4</option>
+				<option value="5-6 days">5-6</option>
+				<option value="Everyday">7</option>
+		</select>
+		</label>
+	</p>
+
+	<p>
+		<label>How long do you exercise per session? <select required
+			id="time" name="duration">
+				<option value="" selected="selected">Select one</option>
+				<option value="<1">Less than 1 hour</option>
+				<option value="1-2">1-2 hours</option>
+				<option value="3-4">3-4 hours</option>
+				<option value=">5">5+ hours</option>
+		</select>
+		</label>
+	</p>
+
+	<p>
+		<label>How long are your breaks during exercise? <select
+			required id="break" name="break_duration">
+				<option value="None selected" selected="selected">Select
+					one</option>
+				<option value="None">None</option>
+				<option value="30 seconds">30 seconds</option>
+				<option value="2 minutes">2 minutes</option>
+				<option value=">2 minutes">2 minutes +</option>
+		</select>
+		</label>
+	</p>
+
+	<p>
+		<label>Notes</label>
+	</p>
+
+	<p>
+		<textarea rows="4" cols="50" name="notes"></textarea>
+	</p>
+
+	<p>
+		<button>Submit</button>
+	</p>
+
+
+</form>
